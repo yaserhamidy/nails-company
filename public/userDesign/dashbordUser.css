@@ -1,0 +1,50 @@
+/* Exam Card Styles */
+.exam-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .exam-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .exam-card .card-header {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .exam-card .card-body {
+    padding: 20px;
+  }
+  
+  .exam-card .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .exam-card .card-text {
+    margin-bottom: 10px;
+  }
+  
+  .exam-card .btn {
+    background-color: #4CAF50;
+    border: none;
+    color: #fff;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .exam-card .btn:hover {
+    background-color: #45a049;
+  }
