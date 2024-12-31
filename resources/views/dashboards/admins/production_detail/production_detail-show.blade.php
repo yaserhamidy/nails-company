@@ -84,7 +84,10 @@
                                 <td>{{$production_detail->product_name}}</td>
                                 <td>{{$production_detail->row_material_name}}</td>
                                 <td>{{$production_detail->quantity_used}}</td>
-                                <td>{{ $production_detail->jalali_date }}</td>
+                                <td>
+
+                                {{ jdate($production_detail->date )->format('l Y/m/d') }}
+                                </td>
 
                             
                                 <td>

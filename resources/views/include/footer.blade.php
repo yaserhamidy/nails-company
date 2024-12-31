@@ -38,15 +38,11 @@
 <script src="{{asset('AdminDesign/plugins/fastclick/fastclick.js')}}"></script>
 <!-- AdminLTE App -->
 <script src="{{asset('AdminDesign/dist/js/adminlte.js')}}"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<!-- AdminLTE for demo purposes -->
 
 
 
-<script src="{{ asset('public/DateTimePicker/JQuery.js') }}"></script>
-<script src="{{ asset('DateTimePicker/moment.js') }}"></script>
-<script src="{{ asset('public/DateTimePicker/Js.js') }}"></script>
-<script src="{{ asset('public/DateTimePicker/JsPicker.js') }}"></script>
+
+
 
 
 <script src="{{asset('AdminDesign/dist/js/pages/dashboard.js"></script>

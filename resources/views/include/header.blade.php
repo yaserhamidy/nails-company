@@ -35,8 +35,11 @@
 
 
   
- <link rel="stylesheet" href="{{ asset('public/DateTimePicker/style.css') }}"/>
-
+ <link rel="stylesheet" href="{{ asset('DateTimePicker/style.css') }}"/>
+ <script src="{{ asset('DateTimePicker/JQuery.js') }}"></script>
+<script src="{{ asset('DateTimePicker/moment.js') }}"></script>
+<script src="{{ asset('DateTimePicker/Js.js') }}"></script>
+<script src="{{ asset('DateTimePicker/JsPicker.js') }}"></script>
 
 
 </head>

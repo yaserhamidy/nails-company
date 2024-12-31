@@ -7,6 +7,9 @@ use App\Models\Product;
 use Illuminate\Support\Facades\DB;
 use App\Models\row_material;
 use App\Models\production_detail;
+use Carbon\Carbon;
+use App\Helpers\Helper;
+use Morilog\Jalali\Jalalian;
 
 class ProductionDetailController extends Controller
 {
@@ -42,7 +45,14 @@ class ProductionDetailController extends Controller
         $product_id = $request->product_id;
         $row_material_id = $request->row_material_id;
         $quantity_used = $request->quantity_used;
-        $date = $request->date;
+        // $date = $request->date;
+        $shamsistartdatebirth = request('date');
+                if($shamsistartdatebirth){
+                    $latin_datestartdate = Helper::persian_to_latin($shamsistartdatebirth);
+                    $georgianCarbonDatestartdate = Jalalian::fromFormat('Y/m/d', $latin_datestartdate)->toCarbon();
+                }else{
+                    $georgianCarbonDatestartdate = Carbon::now()->format('Y/m/d');
+                }
 
         DB::beginTransaction();
 
@@ -62,7 +72,7 @@ class ProductionDetailController extends Controller
             $production_detail->product_id = $product_id;
             $production_detail->quantity_used = $total_quantity_used;
             $production_detail->row_material_id = $row_material_id;
-            $production_detail->date = $date;
+            $production_detail->date = $georgianCarbonDatestartdate;
             $production_detail->save();
 
             $row_material->stock -= $total_quantity_used;

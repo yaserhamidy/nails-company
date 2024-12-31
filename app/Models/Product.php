@@ -36,5 +36,13 @@ class Product extends Model
                 'task_date' => now(),
             ]);
         });
+        static::deleted(function ($product) {
+            \App\Models\dailyTask::create([
+                'task_type' => 'حذف محصول',
+                'description' => 'حذف محصول ' . $product->product_name,
+                'quantity' => $product->stock,
+                'task_date' => now(),
+            ]);
+        });
     }
 }

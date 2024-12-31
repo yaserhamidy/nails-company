@@ -39,8 +39,7 @@ class orderController extends Controller
     public function addOrder(Request $request)
     {
         $request->validate([
-            'product_id' => 'required|exists:products,product_id',
-            'customer_id' => 'required|exists:customers,customer_id',
+            
             'quantity' => 'required|integer|min:1',
             'unit_price' => 'required|numeric',
             'total_price' => 'required|numeric',

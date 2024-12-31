@@ -64,6 +64,14 @@
                     <input id="normal-example1" type="text" name="date" class="form-control" id="inputEmail3"autocomplete="off">
                     </div>
                 </div>
+                <script>
+    $('#normal-example1').persianDatepicker({
+    format: 'YYYY/MM/DD',
+    initialValue: true,
+    autoClose: true,
+    // calendarType: 'persian'  // تنظیم تقویم به میلادی
+  });
+</script>
                                 <div class="form-group">
                                     <input type="submit" class="btn btn-primary btn-round px-5" value="اضافه کردن محصولات">
                                 </div>
@@ -78,14 +86,6 @@
 
 
 
-<script>
-    $(document).ready(function () {
-        $('#normal-example1').persianDatepicker({
-            format: 'YYYY/MM/DD',
-            initialValue: false,
-            autoClose: true
-        });
-    });
-</script>
+
 
 @endsection
